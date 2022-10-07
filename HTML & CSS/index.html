@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pep coding</title>
+    <style>
+        h1{
+            color:green;
+            text-decoration: underline;
+            background-color: red;
+        }
+        .common > p{
+            background-color: lightblue;
+        }
+        .common + div{
+            color:red;
+        }
+        .common ~ div{
+            background-color: black;
+        }
+        label[for]{
+            color: pink;
+        }
+        label[for="name"]{
+            color: blue;
+        }
+    </style>
 </head>
 <body>
-    hello World
+    <div class="common common2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quia dolorum cupiditate nesciunt autem quos voluptas aspernatur earum laudantium sapiente repellat rerum velit dolore nisi debitis, molestias labore excepturi expedita dolores ipsum sunt explicabo ab? Dolorem earum sint id. Harum perspiciatis eius quibusdam sed aspernatur rem iure praesentium sapiente est!</p>
+            </div>
+        <div class="something1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, quia dolorum cupiditate nesciunt autem quos voluptas aspernatur earum laudantium sapiente repellat rerum velit dolore nisi debitis, molestias labore excepturi expedita dolores ipsum sunt explicabo ab? Dolorem earum sint id. Harum perspiciatis eius quibusdam sed aspernatur rem iure praesentium sapiente est!</p>
+            </div>
+        <div class="something3"></div>
+        <div class="something3"></div>
+    </div>
+    <div class="sib">is sibling</div>
+    <h1 class="tab">hello world</h1>
 </body>
+
 </html>
