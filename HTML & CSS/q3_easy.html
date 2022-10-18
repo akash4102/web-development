@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            height: 400vh;
+        }
+        .box{
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card{
+            height: 10rem;
+            width: 10rem;
+            /* background-color: red; */
+            margin: 1rem;
+            border: 5rem;
+        }
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .green{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="card" data-color="blue">1</div>
+        <div class="card" data-color="red">2</div>
+        <div class="card" data-color="blue">3</div>
+        <div class="card" data-color="red">4</div>
+        <div class="card" data-color="red">5</div>
+        <div class="card" data-color="blue">6</div>
+        <div class="card" data-color="green">7</div>
+        <div class="card" data-color="blue">8</div>
+        <div class="card" data-color="green">9</div>
+        <div class="card" data-color="blue">10</div>
+    </div>
+    <script>
+        //Q write a script which fetches the data-color attribute of the cardon double-clicking on them and attaches the fetched class to that card. also changes the data-color attribute to "used"
+        let allcards=document.querySelectorAll(".card");
+        allcards.forEach((card)=>{
+            card.addEventListener("dblclick",(e)=>{
+                let dataColor=card.getAttribute("data-color");
+                // card.classList.add(dataColor);
+                // card.setAttribute("data-color","used")
+                if(dataColor=='blue' || dataColor=='green'|| dataColor=='red' ){
+                    card.classList.add(dataColor);
+                    card.setAttribute("data-color","used")
+                }
+                else  if(dataColor=="used"){
+                    card.classList.remove("blue");
+                    card.classList.remove("red");
+                    card.classList.remove("green");
+                    card.setAttribute("data-color","red");
+                }
+            })
+        })
+    </script>
+</body>
+</html>
