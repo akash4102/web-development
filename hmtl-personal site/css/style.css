@@ -1,0 +1,16 @@
+body{
+    background-color: blueviolet;
+}
+hr{
+    border-style: none;
+    border-top-style: dotted;
+    width: 10%;
+    border-color: grey;
+    border-width: 5px;
+}
+img{
+    height: 100px;
+}
+h1,h3{
+    color: aquamarine;
+}
